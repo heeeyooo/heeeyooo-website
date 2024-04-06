@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ADD CSS STYLES -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" type="image/x-icon" href="img/my-logo.jpg">
+  <!-- COMFORTAA FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <title>heeeyooo</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <span><a href="index.html"><img class="logo-image" src="img/my-logo.jpg" alt="heeeyooo"></a></span>
+      <span style="font-family: Comfortaa;"><a href="index.html">heeeyooo</a></span>
+    </div>
+    <!-- Меню сайта -->
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#section2">Portfolio</a></li>
+        <li><a href="#section3">Contact me</a></li>
+      </ul>
+    </nav>
+    <!-- Иконка бургер меню -->
+    <div class="burger">
+      <span></span>
+    </div>
+  </header>
+  <script>
+    document.querySelector(".burger").addEventListener("click", function () {
+      this.classList.toggle("active");
+      document.querySelector(".nav").classList.toggle("open")
+    })
+  </script>
+  <div class="about-me-container">
+    <p class="main-info-about-me">Hi, I'm Stepan Dordiai<br>Front end Developer</p>
+    <p class="info-about-me">I spend my time as a front end developer<br>
+      I like to integrate new interesting ideas for
+      websites and applications<br>I'm always excited to learn something new<br>In my free time I work out at the gym
+    </p>
+    <a class="heeeyooo-resume-button" href="heeeyooo-resume.pdf" download>Download cv</a>
+  </div>
+  <!-- PORTFOLIO CONTAINER -->
+  <div class="main-project-container" id="section2">
+    <p class="main-portfolio-info">My Recent Work</p>
+    <p class="portfolio-info">Here are a few past design projects I've worked on.</p>
+    <div class="grid-section">
+      <a class="project-link color1" href="project2.html" target="_blank">Progress</a>
+      <a class="project-link color2" href="#" target="_blank">Top 10 places</a>
+      <a class="project-link color3" href="#" target="_blank">Routine</a>
+      <a class="project-link color4" href="project1.html" target="_blank">Playground</a>
+      <a class="project-link color5" href="project3.html" target="_blank">Vocabulary</a>
+    </div>
+  </div>
+  <div class="main-form-container" id="section3">
+    <p class="info-contact-me">Contact me</p>
+    <div class="form-container">
+      <form>
+        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 50px;">
+          <div style="margin-right: 5px;">
+            <label style="margin-left: 10px;" for="name">Name</label> <br>
+            <input class="input-info" type="text" id="name" placeholder="Stepan Dordiai">
+          </div>
+          <div style="margin-left: 5px;">
+            <label style="margin-left: 10px;" for="email">Email Address</label> <br>
+            <input class="input-info" type="email" id="email" placeholder="email@example.com">
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 30px; margin-bottom: 50px;">
+          <div>
+            <label style="margin-left: 10px;" for="message">Message</label> <br>
+            <input type="text" class="input-message-info" id="message" placeholder="How can I help?">
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <input class="form-submit-button" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
