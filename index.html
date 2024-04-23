@@ -14,14 +14,93 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
   <!-- APP ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/4b11705643.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <title>heeeyooo</title>
+  <style>
+    @keyframes float1 {
+      0% {
+        transform: translate(0, 0)
+      }
+
+      50% {
+        transform: translate(-10px, 0)
+      }
+
+      100% {
+        transform: translate(0, 0)
+      }
+    }
+
+    .triangle-float1 {
+      animation: float1 5s infinite;
+    }
+
+    @keyframes float2 {
+      0% {
+        transform: translate(0, 0)
+      }
+
+      50% {
+        transform: translate(-5px, -5px)
+      }
+
+      100% {
+        transform: translate(0, 0)
+      }
+    }
+
+    .triangle-float2 {
+      animation: float2 4s infinite;
+    }
+
+    @keyframes float3 {
+      0% {
+        transform: translate(0, 0)
+      }
+
+      50% {
+        transform: translate(0, -10px)
+      }
+
+      100% {
+        transform: translate(0, 0)
+      }
+    }
+
+    .triangle-float3 {
+      animation: float3 6s infinite;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- BURGER MENU -->
+  <div id="myDIV" class="menu-container">
+    <button class="exit-menu-button" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="link-menu-container">
+      <a class="link1" href="index.html">Home</a>
+      <a class="link2" href="heeeyooo-resume.pdf">Resume</a>
+      <a id="portfolio-js" class="link3" href="#section2">Portfolio</a>
+      <a id="contact-me-js" class="link4" href="#section3">Contact me</a>
+    </div>
+
+    <div class="info-icon2">
+      <a href="https://github.com/heeeyooo" target="_blank"><i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr" target="_blank"><i
+          class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/stepan.dordyay.5" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com/Heeeyooo_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa-brands fa-twitch"></i>
+      </a>
+    </div>
+  </div>
+  <!-- NAVIGATION -->
   <header id="nav-scroll" class="header">
     <a href="index.html"><img id="img-change" class="logo-image" src="img/my-logo-black.png" alt="heeeyooo"></a>
-    <!-- Меню сайта -->
+    <button id="openBtn" class="burger-button"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
     <nav class="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -34,14 +113,98 @@
       </ul>
     </nav>
   </header>
-
   <script>
-    document.querySelector(".burger").addEventListener("click", function () {
-      this.classList.toggle("active");
-      document.querySelector(".nav").classList.toggle("open")
-    })
-  </script>
+    let x = document.getElementById('myDIV')
 
+    document.getElementById("openBtn").addEventListener("click", () => {
+      x.style.display = 'flex'
+      document.body.style.overflowY = 'hidden'
+    });
+    document.getElementById("closeBtn").addEventListener("click", () => {
+      x.style.display = 'none'
+      document.body.style.overflowY = 'auto'
+    });
+    document.getElementById("portfolio-js").addEventListener("click", () => {
+      x.style.display = 'none'
+      document.body.style.overflowY = 'auto'
+    });
+    document.getElementById("contact-me-js").addEventListener("click", () => {
+      x.style.display = 'none'
+      document.body.style.overflowY = 'auto'
+    });
+
+  </script>
+  <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" preserveAspectRatio="none" viewBox="0 0 560 1440">
+    <g mask="url(&quot;#SvgjsMask1050&quot;)" fill="none">
+      <path
+        d="M40.139916911575476 197.50988249824542L-29.469731164559008 225.6340058921595 47.52127796437938 315.98641630940415z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float3"></path>
+      <path
+        d="M168.88612934642393 1150.2289623411498L125.38798523169142 1068.4208515111236 24.424891044018437 1174.5721230982356z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M133.55708251879875 106.93398522476053L-9.739322566375776 73.70752825441758 25.70402851131361 197.3131827408758z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M265.3525802722157 656.1354161255888L260.3517912634934 560.7146775036697 119.72107783497609 615.9262303277127z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M576.9331817824226 183.70707793350442L472.71887599510455 145.66365797950928 487.88988301544146 241.44962653330688z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M320.8635192477442 11.453482254233172L163.84689924979853 84.48943711486234 286.31539211412417 173.468005521516z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M622.6502901530006 1039.5945217808328L506.2188148503605 954.832451497403 490.8762553754641 1079.7875709527632z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M327.39082515462724 1250.7685150590057L400.92115031081073 1204.8216684329793 281.4439785286007 1177.2381899028223z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M370.8260615068406 550.7452621539103L498.0569641751433 557.4131512189329 377.4939505718631 423.51435948560754z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float3"></path>
+      <path
+        d="M568.2279493599978 1048.9944403223674L519.2327643888486 956.8478992725884 405.51054529975477 1076.4139472542017z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M411.7159942133046 1397.7534229632045L488.46633219262515 1451.4945881764677 465.45715942656784 1321.003084983884z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M69.48517890700722 398.20674623493744L107.02868700739737 313.8826464200903-38.22921676506847 299.72943417692863z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M-11.677355623016602 1440.1103573054118L76.59502635976745 1382.9051319464736-4.592524992112473 1339.7369451591783z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M512.4146242783158 1348.5327215020714L484.26068417284927 1266.7677423983416 375.690185569988 1349.8811421084065z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M423.444723046761 351.26755838054453L394.26263160360054 224.8660333333407 297.04319799955715 380.449649823705z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float3"></path>
+      <path
+        d="M71.53287958427174 718.9359957430175L85.6457129828224 833.8758000211036 186.4726838623578 704.8231623444668z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float3"></path>
+      <path
+        d="M371.86646361666885 565.7044262815018L310.4227072984616 540.8795373151214 303.90725200799466 645.4576162756225z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M592.0171502183398 844.5080143381225L543.0331869494855 684.2886898164596 431.7978256966769 893.4919776069768z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+      <path
+        d="M123.20556229057621 997.6535903159253L80.62846572664299 926.7934020865146-4.373268335506509 1026.0891410471197z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float2"></path>
+      <path
+        d="M168.6296196753808 774.4120939003559L136.54434943008954 862.5656493963929 256.78317517141784 806.4973641456471z"
+        fill="rgba(168, 218, 220, 0.51)" class="triangle-float1"></path>
+    </g>
+    <defs>
+      <mask id="SvgjsMask1050">
+        <rect width="560" height="1440" fill="#ffffff"></rect>
+      </mask>
+
+    </defs>
+  </svg>
   <div class="about-me-container">
     <p class="main-info-about-me">Hi, I'm Stepan Dordiai<br>Front end Developer</p>
     <p class="info-about-me">I spend my time as a front end developer<br>
@@ -51,20 +214,68 @@
         excited to learn
         something new</span><br><span class="opac3">In my free time I work out at the gym</span>
     </p>
-
-    <a class="resume-button" href="heeeyooo-resume.pdf">CV</a>
-
+    <a href="heeeyooo-resume.pdf" download="">
+      <button class="resume-button">Download CV</button>
+    </a>
   </div>
   <!-- PORTFOLIO CONTAINER -->
   <div class="main-project-container" id="section2">
     <p class="main-portfolio-info">My Recent Work</p>
     <p class="portfolio-info">Here are a few past design projects I've worked on.</p>
     <div class="grid-section">
-      <a class="project-link color1" href="project2.html" target="_blank">Progress</a>
-      <a class="project-link color2" href="#" target="_blank">Top 10 places</a>
-      <a class="project-link color3" href="#" target="_blank">Routine</a>
-      <a class="project-link color4" href="project1.html" target="_blank">Playground</a>
-      <a class="project-link color5" href="project3.html" target="_blank">Vocabulary</a>
+      <!-- <div class="project-container">
+        <a class="project-link-pro" href="project2.html" target="_blank"></a>
+        <div
+          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
+          <p>Progress</p>
+          <div>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="project-container">
+        <a class="project-link" href="#" target="_blank">Top 10 places</a>
+
+      </div>
+      <div class="project-container">
+        <a class="project-link" href="#" target="_blank">Routine</a>
+
+      </div>
+      <div class="project-container">
+        <a class="project-link" href="project1.html" target="_blank">Playground</a>
+
+      </div> -->
+      <div class="project-container">
+        <a class="project-link-amazon" href="javascript-amazon-project/amazon.html" target="_blank"><img
+            class="img-phone" src="img/Amazon-img-phone.JPG" alt=""></a>
+        <div
+          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
+          <p>Amazon Clone</p>
+          <div>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js" style="color: #FFD43B;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-container">
+        <a class="project-link-gal" href="gallery.html" target="_blank"> <img class="img-phone"
+            src="img/Gallery-img-phone.jpg" alt=""></a>
+
+        <div
+          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
+          <p>Gallery</p>
+          <div>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="project-container">
+        <a class="project-link" href="calculator.html" target="_blank">Calculator v1.0</a>
+
+      </div> -->
     </div>
   </div>
   <!-- FORM CONTAINER -->
@@ -89,7 +300,7 @@
           </div>
         </div>
         <div style="text-align: center;">
-          <input class="form-submit-button" type="submit" value="Send">
+          <input class="form-submit-button" type="submit" value="Submit">
         </div>
       </form>
     </div>
@@ -98,16 +309,14 @@
     <a class="link-img-footer" href="index.html"><img class="logo-image-footer" src="img/my-logo-white.png"
         alt="heeeyooo"></a>
     <div class="info-icon">
-      <a href="https://github.com/heeeyooo" target="_blank"><i class="fa fa-github"></i>
+      <a href="https://github.com/heeeyooo" target="_blank"><i class="fa-brands fa-github"></i>
       </a>
       <a href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr" target="_blank"><i
-          class="fa fa-instagram"></i>
+          class="fa-brands fa-instagram"></i>
       </a>
-      <a href="https://www.facebook.com/stepan.dordyay.5
-" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
-      <a href="https://twitter.com/Heeeyooo_
-" target="_blank"><i class="fa fa-twitter" style="font-size:24px"></i></a>
-      <a href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa fa-twitch" style="font-size:24px"></i>
+      <a href="https://www.facebook.com/stepan.dordyay.5" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com/Heeeyooo_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa-brands fa-twitch"></i>
       </a>
     </div>
   </footer>
