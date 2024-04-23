@@ -15,7 +15,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
   <!-- APP ICONS -->
   <script src="https://kit.fontawesome.com/4b11705643.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <title>heeeyooo</title>
   <style>
     @keyframes float1 {
@@ -77,7 +76,7 @@
 <body>
   <!-- BURGER MENU -->
   <div id="myDIV" class="menu-container">
-    <button class="exit-menu-button" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+    <button class="exit-menu-button" id="closeBtn"><i class="fa-solid fa-xmark js-button"></i></button>
     <div class="link-menu-container">
       <a class="link1" href="index.html">Home</a>
       <a class="link2" href="heeeyooo-resume.pdf">Resume</a>
@@ -100,6 +99,10 @@
   <!-- NAVIGATION -->
   <header id="nav-scroll" class="header">
     <a href="index.html"><img id="img-change" class="logo-image" src="img/my-logo-black.png" alt="heeeyooo"></a>
+    <div class="day-night-container">
+      <p style="font-size: small; margin: 0;">New feature!</p>
+      <button class="day-night-style" id="day-night-button" title="Double click!">Day</button>
+    </div>
     <button id="openBtn" class="burger-button"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
     <nav class="nav">
       <ul>
@@ -113,27 +116,7 @@
       </ul>
     </nav>
   </header>
-  <script>
-    let x = document.getElementById('myDIV')
 
-    document.getElementById("openBtn").addEventListener("click", () => {
-      x.style.display = 'flex'
-      document.body.style.overflowY = 'hidden'
-    });
-    document.getElementById("closeBtn").addEventListener("click", () => {
-      x.style.display = 'none'
-      document.body.style.overflowY = 'auto'
-    });
-    document.getElementById("portfolio-js").addEventListener("click", () => {
-      x.style.display = 'none'
-      document.body.style.overflowY = 'auto'
-    });
-    document.getElementById("contact-me-js").addEventListener("click", () => {
-      x.style.display = 'none'
-      document.body.style.overflowY = 'auto'
-    });
-
-  </script>
   <svg class="my-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:svgjs="http://svgjs.dev/svgjs" preserveAspectRatio="none" viewBox="0 0 560 1440">
     <g mask="url(&quot;#SvgjsMask1050&quot;)" fill="none">
@@ -320,6 +303,42 @@
       </a>
     </div>
   </footer>
+  <script>
+    let x = document.getElementById('myDIV');
+    const closeButton = document.getElementById("closeBtn");
+    const openButton = document.getElementById("openBtn");
+    openButton.addEventListener("click", () => {
+      x.style.display = 'flex'
+      document.body.style.overflowY = 'hidden'
+    });
+    closeButton.addEventListener("click", () => {
+      x.style.display = 'none'
+      document.body.style.overflowY = 'auto'
+    });
+    document.getElementById("portfolio-js").addEventListener("click", () => {
+      x.style.display = 'none'
+      document.body.style.overflowY = 'auto'
+    });
+    document.getElementById("contact-me-js").addEventListener("click", () => {
+      x.style.display = 'none'
+      document.body.style.overflowY = 'auto'
+    });
+
+  </script>
+  <script>
+    const dayNight = document.getElementById('day-night-button')
+    dayNight.addEventListener('dblclick', () => {
+      if (dayNight.innerHTML === 'Day') {
+        dayNight.innerHTML = 'Night'
+        document.body.style.backgroundColor = 'white'
+        document.body.style.color = 'black'
+      } else {
+        dayNight.innerHTML = 'Day'
+        document.body.style.backgroundColor = 'rgb(50, 50, 50)'
+        document.body.style.color = 'white'
+      }
+    })
+  </script>
 </body>
 
 </html>
