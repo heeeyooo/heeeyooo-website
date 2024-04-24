@@ -1,7 +1,7 @@
 body {
   font-family: Comfortaa;
-  background-color: rgb(50, 50, 50);
-  color: white;
+  background-color: white;
+  color: black;
   margin: 0;
 }
 /* NAVIGATION CONTAINER */
@@ -19,8 +19,8 @@ body {
   -webkit-backdrop-filter: blur(10px);
   padding: 0 20px;
   z-index: 60;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-radius: 0 0 50px 50px;
+  transition: top 0.3s;
 }
 
 .logo-image {
@@ -32,19 +32,14 @@ body {
 }
 
 .day-night-style {
-  background-color: white;
+  background-color: black;
   font-size: 12px;
   border: none;
   padding: 5px 20px;
   cursor: pointer;
-  color: black;
+  color: white;
   border-radius: 10px;
   transition: all 0.5s;
-}
-
-.day-night-style:hover {
-  color: white;
-  box-shadow: inset 100px 0 0 black;
 }
 
 .burger-button {
@@ -67,27 +62,6 @@ body {
 a {
   color: black;
   text-decoration: none;
-}
-
-.my-svg {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0;
-  animation: animationOpacity 2s 3.5s forwards;
-}
-
-@keyframes animationOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* ABOUT ME CONTAINER */
@@ -143,9 +117,9 @@ a {
 
 .resume-button:hover {
   color: white;
-  background-color: #a8dadc;
-  box-shadow: 0 15px 20px #a8dadc7f;
-  transform: translateY(-7px);
+  background-color: black;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
 }
 
 @keyframes main-info-opac {
@@ -159,14 +133,16 @@ a {
 
 /* PORTFOLIO CONTAINER */
 .main-project-container {
-  background-color: white;
-  color: black;
+  position: relative;
+  bottom: -50px;
+  background-color: black;
+  color: white;
   width: 100%;
+  height: 1500px;
   margin-top: 210px;
   padding-top: 100px;
   text-align: center;
-  margin-bottom: 500px;
-  border-radius: 50px;
+  border-radius: 50px 50px 0 0;
 }
 
 .main-portfolio-info {
@@ -182,7 +158,7 @@ a {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 380px;
+  grid-template-columns: 400px 400px;
   gap: 25px;
   padding-bottom: 200px;
 }
@@ -218,6 +194,7 @@ a {
   height: 320px;
   background-color: white;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .project-link-amazon {
@@ -263,28 +240,22 @@ a {
 /* FORM CONTAINER */
 .main-form-container {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.712);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  width: 100%;
-  height: 1000px;
-  margin-bottom: 500px;
-  border-radius: 50px;
+  right: 0;
+  left: 0;
+  min-height: 900px;
+  background-color: white;
+  border-radius: 50px 50px 0 0;
 }
 
 .form-container {
   position: absolute;
-  bottom: -50px;
+  top: 50px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
   height: 600px;
-  background-color: white;
-  color: black;
-  border-radius: 50px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 .info-contact-me {
@@ -293,29 +264,39 @@ a {
 }
 
 .input-info {
-  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(245, 245, 245);
   width: 250px;
-  padding: 20px 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.input-subject-info {
+  background-color: rgb(245, 245, 245);
+
+  width: 550px;
+  padding: 20px;
   border: none;
   border-radius: 10px;
 }
 
 .input-message-info {
+  resize: none;
   border: none;
-  padding: 10px 0 150px 10px;
-  width: 580px;
+  padding: 20px;
+  width: 550px;
   border-radius: 10px;
-  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(245, 245, 245);
 }
 
 .form-submit-button {
   background-color: white;
   font-size: 16px;
   border: none;
-  border: 1px solid #a8dadc;
+  border: 1px solid black;
   padding: 20px 60px;
   cursor: pointer;
-  color: #a8dadc;
+  color: black;
   border-radius: 10px;
   transition: all 0.5s;
 }
@@ -323,8 +304,8 @@ a {
 .form-submit-button:hover {
   transform: scale(1.1);
   color: white;
-  box-shadow: inset 65px 0 0 #a8dadc, inset -65px 0 0 #a8dadc,
-    inset 0 50px 0 #a8dadc, inset 0 -50px 0 #a8dadc;
+  box-shadow: inset 65px 0 0 black, inset -65px 0 0 black, inset 0 50px 0 black,
+    inset 0 -50px 0 black;
   border: none;
 }
 
@@ -333,15 +314,12 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  height: 500px;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 50px 50px 0 0;
   padding: 25px;
 }
 
@@ -356,7 +334,6 @@ a {
 
 .info-icon {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -366,10 +343,6 @@ a {
   font-size: 24px;
   color: white;
   transition: color 0.15s;
-}
-
-.info-icon a:hover {
-  color: #a8dadc;
 }
 
 .info-icon2 {
@@ -393,7 +366,7 @@ a {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 24px;
-  color: white;
+  color: black;
 }
 
 .menu-container {
@@ -406,7 +379,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgb(50, 50, 50);
+  background-color: white;
   z-index: 9999;
 }
 
@@ -424,6 +397,10 @@ a {
   cursor: pointer;
   font-size: 24px;
   animation: changeExitButton 1s;
+}
+
+.exit-menu-button i {
+  color: black;
 }
 
 @keyframes changeExitButton {
@@ -446,31 +423,39 @@ a {
   font-size: 20px;
 }
 
+.link-menu-container a {
+  color: black;
+}
+
 .link1 {
-  color: transparent;
+  opacity: 0;
+
   animation: changeLink1 1s 0.1s forwards;
 }
 
 .link2 {
-  color: transparent;
+  opacity: 0;
+
   animation: changeLink1 1s 0.2s forwards;
 }
 
 .link3 {
-  color: transparent;
+  opacity: 0;
+
   animation: changeLink1 1s 0.3s forwards;
 }
 
 .link4 {
-  color: transparent;
+  opacity: 0;
+
   animation: changeLink1 1s 0.4s forwards;
 }
 @keyframes changeLink1 {
   from {
-    color: transparent;
+    opacity: 0;
   }
   to {
-    color: white;
+    opacity: 1;
   }
 }
 
@@ -509,7 +494,7 @@ a {
   }
 
   .grid-section {
-    grid-template-columns: 380px;
+    grid-template-columns: 400px;
     row-gap: 50px;
   }
 }
@@ -546,15 +531,17 @@ a {
     height: 500px;
   }
   .input-info {
-    margin-top: 10px;
-    width: 100px;
+    width: 150px;
+    padding: 15px 15px;
+  }
+
+  .input-subject-info {
+    width: 340px;
     padding: 15px 15px;
   }
 
   .input-message-info {
-    margin-top: 10px;
-    width: 260px;
-    padding: 10px 0 100px 10px;
+    width: 330px;
   }
 
   .form-submit-button {
