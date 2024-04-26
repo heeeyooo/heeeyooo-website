@@ -45,8 +45,22 @@ dayNight.addEventListener("click", () => {
     document.querySelector(".js-menu4").style.color = "white";
     document.querySelector(".js-contact").style.backgroundColor = "black";
     document.querySelector(".js-contact").style.color = "white";
-    document.querySelector(".js-project").style.backgroundColor = "white";
-    document.querySelector(".js-project").style.color = "black";
+    document.querySelector(".js-project").style.backgroundColor = "black";
+    document.querySelector(".js-project").style.color = "white";
+    document.querySelector(".js-skills").style.backgroundColor = "black";
+    document.querySelector(".js-skills").style.color = "white";
+    document.querySelector(".js-skills1").style.backgroundColor =
+      "rgb(30, 30, 30)";
+    document.querySelector(".js-skills2").style.backgroundColor =
+      "rgb(30, 30, 30)";
+    document.querySelector(".js-skills3").style.backgroundColor =
+      "rgb(30, 30, 30)";
+    document.querySelector(".js-skills4").style.backgroundColor =
+      "rgb(30, 30, 30)";
+    document.querySelector(".js-skills5").style.backgroundColor =
+      "rgb(30, 30, 30)";
+    document.querySelector(".js-skills6").style.backgroundColor =
+      "rgb(30, 30, 30)";
   } else {
     dayNight.innerHTML = "Night";
     dayNight.style.color = "white";
@@ -73,19 +87,72 @@ dayNight.addEventListener("click", () => {
     document.querySelector(".js-menu4").style.color = "black";
     document.querySelector(".js-contact").style.backgroundColor = "white";
     document.querySelector(".js-contact").style.color = "black";
-    document.querySelector(".js-project").style.backgroundColor = "black";
-    document.querySelector(".js-project").style.color = "white";
+    document.querySelector(".js-project").style.backgroundColor = "white";
+    document.querySelector(".js-project").style.color = "black";
+    document.querySelector(".js-skills").style.backgroundColor = "white";
+    document.querySelector(".js-skills").style.color = "black";
+    document.querySelector(".js-skills1").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".js-skills2").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".js-skills3").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".js-skills4").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".js-skills5").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".js-skills6").style.backgroundColor =
+      "rgb(245, 245, 245)";
   }
 });
+
+// Get the button:
+const mybutton = document.getElementById("toTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 1000 ||
+    document.documentElement.scrollTop > 1000
+  ) {
+    mybutton.style.display = "block";
+    mybutton.style.animation = "toTopButton 0.5s forwards";
+  } else {
+    mybutton.style.animation = "toDownButton 0.5s forwards";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
+  scrollFunction();
+
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("head-scroll").style.top = "0";
+    document.getElementById("js-scroll").style.top = "0";
   } else {
-    document.getElementById("head-scroll").style.top = "-100px";
+    document.getElementById("js-scroll").style.top = "-100px";
   }
   prevScrollpos = currentScrollPos;
 };
+
+let playSong = document.getElementById("music");
+document.getElementById("music-button").addEventListener("click", () => {
+  if (playSong.paused) {
+    playSong.play();
+    document.getElementById(
+      "music-button"
+    ).innerHTML = `<i class="fa-solid fa-pause"></i>`;
+  } else {
+    playSong.pause();
+    document.getElementById(
+      "music-button"
+    ).innerHTML = `<i class="fa-solid fa-play"></i>`;
+  }
+});

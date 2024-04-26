@@ -19,7 +19,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
   padding: 0 20px;
   z-index: 60;
-  border-radius: 0 0 50px 50px;
+  /* border-radius: 0 0 50px 50px; */
   transition: top 0.3s;
 }
 
@@ -40,6 +40,14 @@ body {
   color: white;
   border-radius: 10px;
   transition: all 0.5s;
+}
+
+.song-button {
+  font-size: 26px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .burger-button {
@@ -133,16 +141,13 @@ a {
 
 /* PORTFOLIO CONTAINER */
 .main-project-container {
-  position: relative;
-  bottom: -50px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   width: 100%;
   height: 1500px;
   margin-top: 210px;
   padding-top: 100px;
   text-align: center;
-  border-radius: 50px 50px 0 0;
 }
 
 .main-portfolio-info {
@@ -163,7 +168,7 @@ a {
   padding-bottom: 200px;
 }
 
-.project-link-pro {
+/* .project-link-pro {
   width: 100%;
   height: 100%;
   background-image: url(/img/Progress-img.JPG);
@@ -172,7 +177,7 @@ a {
   background-position: center;
   border-radius: 10px;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .project-link-gal {
   width: 100%;
@@ -182,7 +187,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .project-container {
@@ -192,7 +197,7 @@ a {
   justify-content: center;
   width: 380px;
   height: 320px;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   border-radius: 10px;
   padding: 10px;
 }
@@ -205,7 +210,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1); */
 }
 
 /* .project-link {
@@ -220,14 +225,6 @@ a {
   background-color: black;
 } */
 
-.fa-html5 {
-  color: red;
-}
-
-.fa-css3-alt {
-  color: blue;
-}
-
 .img-phone {
   float: right;
   border-radius: 10px;
@@ -235,6 +232,56 @@ a {
   width: 100px;
   margin-top: 10px;
   margin-right: 10px;
+}
+/* SKILLS CONTAINER */
+.skills-container {
+  position: relative;
+  bottom: -50px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 1500px;
+  margin-top: 210px;
+  padding-top: 100px;
+  text-align: center;
+  /* border-radius: 50px 50px 0 0; */
+}
+
+.skills-container i {
+  font-size: 3rem;
+  transition: transform 0.5s;
+  animation: leviate 4s infinite linear;
+}
+
+.skills-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+}
+
+.icon-container-current {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FORM CONTAINER */
@@ -244,7 +291,7 @@ a {
   left: 0;
   min-height: 900px;
   background-color: white;
-  border-radius: 50px 50px 0 0;
+  /* border-radius: 50px 50px 0 0; */
 }
 
 .form-container {
@@ -319,7 +366,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 50px 50px 0 0;
   padding: 25px;
 }
 
@@ -459,6 +505,40 @@ a {
   }
 }
 
+.style-to-top-btn {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+@keyframes toTopButton {
+  from {
+    bottom: -50px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+
+@keyframes toDownButton {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: -50px;
+  }
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1280px) {
@@ -547,5 +627,19 @@ a {
   .form-submit-button {
     font-size: 14px;
     padding: 10px 40px;
+  }
+
+  .skills-grid {
+    gap: 10px;
+    grid-template-columns: 75px 75px 75px 75px;
+  }
+  .icon-container,
+  .icon-container-current {
+    width: 75px;
+    height: 75px;
+  }
+
+  .skills-container i {
+    font-size: 1.5rem;
   }
 }
