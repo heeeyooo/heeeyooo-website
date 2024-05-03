@@ -17,6 +17,11 @@ document.getElementById("contact-me-js").addEventListener("click", () => {
   x.style.display = "none";
   document.body.style.overflowY = "auto";
 });
+document.getElementById("skills-js").addEventListener("click", () => {
+  x.style.display = "none";
+  document.body.style.overflowY = "auto";
+});
+
 const dayNight = document.getElementById("day-night-button");
 dayNight.addEventListener("click", () => {
   if (dayNight.innerHTML === "Night") {
@@ -38,6 +43,7 @@ dayNight.addEventListener("click", () => {
     document.querySelector(".js-text2").style.color = "white";
     document.querySelector(".js-text3").style.color = "white";
     document.querySelector(".js-text4").style.color = "white";
+    document.querySelector(".js-text5").style.color = "white";
     document.querySelector(".js-menu").style.color = "white";
     document.querySelector(".js-menu1").style.color = "white";
     document.querySelector(".js-menu2").style.color = "white";
@@ -61,6 +67,9 @@ dayNight.addEventListener("click", () => {
       "rgb(30, 30, 30)";
     document.querySelector(".js-skills6").style.backgroundColor =
       "rgb(30, 30, 30)";
+    document.querySelector(".js-skills7").style.backgroundColor =
+      "rgb(30, 30, 30)";
+    document.querySelector(".main-quote").style.color = "black";
   } else {
     dayNight.innerHTML = "Night";
     dayNight.style.color = "white";
@@ -80,6 +89,7 @@ dayNight.addEventListener("click", () => {
     document.querySelector(".js-text2").style.color = "black";
     document.querySelector(".js-text3").style.color = "black";
     document.querySelector(".js-text4").style.color = "black";
+    document.querySelector(".js-text5").style.color = "black";
     document.querySelector(".js-menu").style.color = "black";
     document.querySelector(".js-menu1").style.color = "black";
     document.querySelector(".js-menu2").style.color = "black";
@@ -103,6 +113,9 @@ dayNight.addEventListener("click", () => {
       "rgb(245, 245, 245)";
     document.querySelector(".js-skills6").style.backgroundColor =
       "rgb(245, 245, 245)";
+    document.querySelector(".js-skills7").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".main-quote").style.color = "white";
   }
 });
 
@@ -156,3 +169,17 @@ document.getElementById("music-button").addEventListener("click", () => {
     ).innerHTML = `<i class="fa-solid fa-play"></i>`;
   }
 });
+
+const changeText = document.getElementById("js-quote");
+setInterval(() => {
+  if (changeText.innerHTML === "effectively") {
+    changeText.innerHTML = "wisely";
+  } else if (changeText.innerHTML === "wisely") {
+    changeText.innerHTML = "correctly";
+  } else {
+    changeText.innerHTML = "effectively";
+  }
+}, 2000);
+
+// ENABLE HOVER FOR MOBILE DEVICES
+document.addEventListener("touchstart", function () {}, true);
