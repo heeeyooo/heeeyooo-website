@@ -1,3 +1,4 @@
+alert("Double click for day/night button!");
 const x = document.getElementById("myDIV");
 const closeButton = document.getElementById("closeBtn");
 const openButton = document.getElementById("openBtn");
@@ -23,7 +24,7 @@ document.getElementById("skills-js").addEventListener("click", () => {
 });
 
 const dayNight = document.getElementById("day-night-button");
-dayNight.addEventListener("click", () => {
+dayNight.addEventListener("dblclick", () => {
   if (dayNight.innerHTML === "Night") {
     dayNight.innerHTML = "Day";
     dayNight.style.color = "black";
