@@ -1,4 +1,3 @@
-alert("Double click for day/night button!");
 const x = document.getElementById("myDIV");
 const closeButton = document.getElementById("closeBtn");
 const openButton = document.getElementById("openBtn");
@@ -70,6 +69,8 @@ dayNight.addEventListener("dblclick", () => {
       "rgb(30, 30, 30)";
     document.querySelector(".js-skills7").style.backgroundColor =
       "rgb(30, 30, 30)";
+    document.querySelector(".js-skills8").style.backgroundColor =
+      "rgb(30, 30, 30)";
     document.querySelector(".main-quote").style.color = "black";
   } else {
     dayNight.innerHTML = "Night";
@@ -115,6 +116,8 @@ dayNight.addEventListener("dblclick", () => {
     document.querySelector(".js-skills6").style.backgroundColor =
       "rgb(245, 245, 245)";
     document.querySelector(".js-skills7").style.backgroundColor =
+      "rgb(245, 245, 245)";
+    document.querySelector(".js-skills8").style.backgroundColor =
       "rgb(245, 245, 245)";
     document.querySelector(".main-quote").style.color = "white";
   }

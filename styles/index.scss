@@ -1,3 +1,5 @@
+@import "globals";
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: $bgheader;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 0 20px;
@@ -58,13 +60,15 @@ body {
   display: flex;
   width: 50%;
 }
-
-.nav ul {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
+// SCSS NESTED RULE
+.nav {
+  ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 }
 
 a {
@@ -80,8 +84,11 @@ a {
 }
 
 .main-info-about-me {
-  font-size: 65px;
-  font-weight: bold;
+  //SCSS PROPERTY
+  font: {
+    size: 65px;
+    weight: bold;
+  }
   opacity: 0;
   animation: main-info-opac 1s 0.5s forwards;
 }
@@ -145,15 +152,21 @@ a {
   color: black;
   width: 100%;
   height: 1500px;
-  margin-top: 210px;
+  // SCSS PROPERTY
+  margin: {
+    top: 210px;
+    bottom: 1000px;
+  }
   padding-top: 100px;
-  margin-bottom: 1000px;
   text-align: center;
 }
 
 .main-portfolio-info {
-  font-size: 40px;
-  font-weight: bold;
+  // SCSS PROPERTY
+  font: {
+    size: 40px;
+    weight: bold;
+  }
   margin: 0;
 }
 
@@ -251,10 +264,12 @@ a {
 .project-link-amazon {
   width: 100%;
   height: 100%;
-  background-image: url(/img/Amazon-img.JPG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: {
+    image: url(/img/Amazon-img.JPG);
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
   border-radius: 10px;
 }
 
@@ -351,6 +366,14 @@ a {
   grid-template-columns: 200px 200px 200px 200px;
 }
 
+.current-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: 200px;
+}
+
 .skills-container i {
   font-size: 3rem;
   transition: transform 0.5s;
@@ -373,15 +396,12 @@ a {
 
 .icon-container-current {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
   width: 200px;
   height: 200px;
-  margin-left: auto;
-  margin-right: auto;
   cursor: pointer;
 }
 
@@ -764,6 +784,12 @@ a {
     gap: 10px;
     grid-template-columns: 75px 75px 75px 75px;
   }
+
+  .current-grid {
+    gap: 10px;
+    grid-template-columns: 75px;
+  }
+
   .icon-container,
   .icon-container-current {
     width: 75px;
