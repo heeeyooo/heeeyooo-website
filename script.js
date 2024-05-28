@@ -23,11 +23,9 @@ document.getElementById("skills-js").addEventListener("click", () => {
 });
 
 const dayNight = document.getElementById("day-night-button");
-dayNight.addEventListener("dblclick", () => {
-  if (dayNight.innerHTML === "Night") {
-    dayNight.innerHTML = "Day";
-    dayNight.style.color = "black";
-    dayNight.style.backgroundColor = "white";
+dayNight.addEventListener("click", () => {
+  if (document.body.style.backgroundColor === "white") {
+    dayNight.innerHTML = `<i class="fa-solid fa-sun"></i>`;
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
     document.querySelector(".js-img").src = "img/my-logo-black.png";
@@ -73,9 +71,7 @@ dayNight.addEventListener("dblclick", () => {
       "rgb(30, 30, 30)";
     document.querySelector(".main-quote").style.color = "black";
   } else {
-    dayNight.innerHTML = "Night";
-    dayNight.style.color = "white";
-    dayNight.style.backgroundColor = "black";
+    dayNight.innerHTML = `<i class="fa-solid fa-moon"></i>`;
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
     document.querySelector(".js-img").src = "img/my-logo-white.png";
@@ -149,7 +145,6 @@ function topFunction() {
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   scrollFunction();
-
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("js-scroll").style.top = "0";
@@ -159,6 +154,28 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
+// let lastScrollTop = 0;
+// let navbar1 = document.getElementById("js-scroll");
+// addEventListener("scroll", () => {
+//   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   if (scrollTop > lastScrollTop) {
+//     navbar1.style.top = "-100px";
+//   } else {
+//     navbar1.style.top = "0";
+//   }
+//   lastScrollTop = scrollTop;
+// });
+
+// SOLUTION FOR HEADER ON MOBILE
+addEventListener("scroll", () => {
+  let navbar1 = document.getElementById("js-scroll");
+
+  if (window.pageYOffset <= 0 || window.pageYOffset <= 100) {
+    navbar1.style.top = "0";
+  }
+});
+
+// SONG
 let playSong = document.getElementById("music");
 document.getElementById("music-button").addEventListener("click", () => {
   if (playSong.paused) {
@@ -174,6 +191,7 @@ document.getElementById("music-button").addEventListener("click", () => {
   }
 });
 
+// FOOTER QUOTE
 const changeText = document.getElementById("js-quote");
 setInterval(() => {
   if (changeText.innerHTML === "effectively") {
@@ -187,3 +205,133 @@ setInterval(() => {
 
 // ENABLE HOVER FOR MOBILE DEVICES
 document.addEventListener("touchstart", function () {}, true);
+
+// SKILLS PROGRESS
+function move(percent, color) {
+  let elem = document.getElementById("myBar");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo").style.display = "block";
+      document.getElementById("demo").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move1(percent, color) {
+  let elem = document.getElementById("myBar1");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo1").style.display = "block";
+      document.getElementById("demo1").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move2(percent, color) {
+  let elem = document.getElementById("myBar2");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo2").style.display = "block";
+      document.getElementById("demo2").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move3(percent, color) {
+  let elem = document.getElementById("myBar3");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo3").style.display = "block";
+      document.getElementById("demo3").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move4(percent, color) {
+  let elem = document.getElementById("myBar4");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo4").style.display = "block";
+      document.getElementById("demo4").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move5(percent, color) {
+  let elem = document.getElementById("myBar5");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo5").style.display = "block";
+      document.getElementById("demo5").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move6(percent, color) {
+  let elem = document.getElementById("myBar6");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo6").style.display = "block";
+      document.getElementById("demo6").innerHTML = width * 1 + "%";
+    }
+  }
+}
+function move7(percent, color) {
+  let elem = document.getElementById("myBar7");
+  let width = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percent) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      elem.style.backgroundColor = color;
+      document.getElementById("demo7").style.display = "block";
+      document.getElementById("demo7").innerHTML = width * 1 + "%";
+    }
+  }
+}

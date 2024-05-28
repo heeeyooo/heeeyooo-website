@@ -1,11 +1,22 @@
 @import "globals";
 
+@mixin backdropFilter($property) {
+  -webkit-backdrop-filter: $property;
+  backdrop-filter: $property;
+}
+
+@mixin project-flex-centered {
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Comfortaa;
+  font-family: Comfortaa, serif;
   background-color: white;
   color: black;
   margin: 0;
@@ -22,34 +33,43 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: $bgheader;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  @include backdropFilter(blur(10px));
   padding: 0 20px;
   z-index: 60;
-  transition: top 0.3s;
+  transition: all 0.3s;
+  border-radius: 50px;
 }
 
 .logo-image {
   width: 80px;
 }
 
-.day-night-style {
-  background-color: black;
-  font-size: 12px;
-  border: none;
-  padding: 5px 20px;
-  cursor: pointer;
-  color: white;
-  border-radius: 10px;
+.new-features {
+  background-color: transparent;
+  border-radius: 50px;
   transition: all 0.5s;
 }
 
+.new-features:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+.new-features:hover .day-night-style {
+  margin-right: 40px;
+}
+
+.day-night-style,
 .song-button {
-  font-size: 26px;
-  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-size: 24px;
   color: black;
+  border: none;
   cursor: pointer;
   background-color: transparent;
+  transition: all 0.5s;
 }
 
 .burger-button {
@@ -74,6 +94,16 @@ body {
 a {
   color: black;
   text-decoration: none;
+}
+
+.nav a {
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  background-color: rgb(232, 232, 232);
+  padding: 10px 10px;
 }
 
 /* ABOUT ME SECTION */
@@ -131,9 +161,7 @@ a {
 }
 
 .resume-button:hover {
-  color: white;
-  background-color: black;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 
@@ -151,11 +179,11 @@ a {
   background-color: white;
   color: black;
   width: 100%;
-  height: 1500px;
+  height: 500px;
   // SCSS PROPERTY
   margin: {
     top: 210px;
-    bottom: 1000px;
+    bottom: 500px;
   }
   padding-top: 100px;
   text-align: center;
@@ -183,177 +211,81 @@ a {
   padding-bottom: 200px;
 }
 
+.project-container-example1,
+.project-container-example2,
+.project-container-exampl,
+.project-container-thae,
+.project-container-gal,
 .project-container {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 380px;
-  height: 320px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
+  position: relative;
+  width: 400px;
+  height: 340px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
 }
 
-.project-container-gal {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 380px;
-  height: 320px;
-  background-color: rgb(225, 225, 225);
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
-}
-
-.project-container-thae {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 380px;
-  height: 320px;
-  background-color: rgb(205, 205, 205);
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
-}
-
-.project-container-example {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 380px;
-  height: 320px;
-  background-color: rgb(185, 185, 185);
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
-}
-
-.project-container-example1 {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 380px;
-  height: 320px;
-  background-color: rgb(165, 165, 165);
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
+.project-container {
+  background-image: url(/img/gym.JPG);
 }
 
 .project-container-example2 {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 380px;
-  height: 320px;
-  background-color: rgb(145, 145, 145);
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
+  background-color: rgb(71, 224, 255);
 }
 
-.project-link-amazon {
-  width: 100%;
-  height: 100%;
-  background: {
-    image: url(/img/Amazon-img.JPG);
-    size: cover;
-    repeat: no-repeat;
-    position: center;
-  }
-  border-radius: 10px;
-}
-
-.project-link-gal {
-  width: 100%;
-  height: 100%;
+.project-container-gal {
   background-image: url(/img/Gallery-img.JPG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
 }
 
-.project-link-thea {
-  width: 100%;
-  height: 100%;
+.project-container-thae {
   background-image: url(/img/theatre.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
 }
 
-.project-link-example {
-  width: 100%;
-  height: 100%;
-  background-color: blueviolet;
-  border-radius: 10px;
+.project-container-exampl {
+  background-image: url(/img/Amazon-img.JPG);
 }
 
-.project-link-example1 {
-  width: 100%;
-  height: 100%;
-  background-color: greenyellow;
-  border-radius: 10px;
+.project-container-example1 {
+  background-color: rgb(250, 93, 93);
 }
 
-.project-link-example2 {
-  width: 100%;
-  height: 100%;
-  background-color: aqua;
-  border-radius: 10px;
+.content-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 40%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  border-radius: 50px;
+  transition: all 0.5s;
 }
 
-.dot1 {
-  animation: changeDot 1s infinite;
-}
-.dot2 {
-  animation: changeDot 1s infinite;
-}
-.dot3 {
-  animation: changeDot 1s infinite;
+.content-item a {
+  color: white;
+  font-size: 30px;
 }
 
-@keyframes changeDot {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.img-phone {
-  float: right;
-  border-radius: 10px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-  width: 100px;
-  margin-top: 10px;
-  margin-right: 10px;
+.project-container-example1:hover .content-item,
+.project-container-exampl:hover .content-item,
+.project-container-thae:hover .content-item,
+.project-container-gal:hover .content-item,
+.project-container-example2:hover .content-item,
+.project-container:hover .content-item {
+  opacity: 1;
 }
 
 /* SKILLS SECTION*/
 .skills-container {
-  position: relative;
-  /* bottom: -50px; */
   background-color: white;
   color: black;
   width: 100%;
-  height: 1500px;
+  height: 700px;
   margin-top: 210px;
+  margin-bottom: 500px;
   padding-top: 100px;
   text-align: center;
 }
@@ -364,6 +296,7 @@ a {
   align-items: center;
   gap: 15px;
   grid-template-columns: 200px 200px 200px 200px;
+  margin-bottom: 50px;
 }
 
 .current-grid {
@@ -372,6 +305,7 @@ a {
   align-items: center;
   gap: 15px;
   grid-template-columns: 200px;
+  margin-bottom: 50px;
 }
 
 .skills-container i {
@@ -436,24 +370,27 @@ a {
   padding: 20px;
   border: none;
   border-radius: 10px;
+  outline: none;
 }
 
 .input-subject-info {
   background-color: rgb(245, 245, 245);
-
   width: 550px;
   padding: 20px;
   border: none;
   border-radius: 10px;
+  outline: none;
 }
 
 .input-message-info {
+  font-family: Arial, Helvetica, sans-serif;
   resize: none;
   border: none;
   padding: 20px;
   width: 550px;
   border-radius: 10px;
   background-color: rgb(245, 245, 245);
+  outline: none;
 }
 
 .form-submit-button {
@@ -488,6 +425,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding: 25px;
+  border-radius: 50px 50px 0 0;
 }
 
 .logo-image-footer {
@@ -535,7 +473,7 @@ a {
   transition: color 0.15s;
 }
 
-/* BURGER MENU SECTION */
+/* MOBILE MENU SECTION */
 .menu-container {
   display: none;
   flex-direction: column;
@@ -587,7 +525,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 1.5;
 }
 
 .link-menu-container a {
@@ -595,34 +534,58 @@ a {
 }
 
 .link1 {
+  position: relative;
   opacity: 0;
-
   animation: changeLink1 1s 0.1s forwards;
 }
 
 .link2 {
+  position: relative;
   opacity: 0;
-
   animation: changeLink1 1s 0.2s forwards;
 }
 
 .link3 {
+  position: relative;
   opacity: 0;
-
   animation: changeLink1 1s 0.3s forwards;
 }
 
 .link4 {
+  position: relative;
   opacity: 0;
-
   animation: changeLink1 1s 0.4s forwards;
 }
 
 .link5 {
+  position: relative;
   opacity: 0;
-
   animation: changeLink1 1s 0.5s forwards;
 }
+
+.link1::after,
+.link2::after,
+.link3::after,
+.link4::after,
+.link5::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: black;
+  transition: width 0.3s;
+}
+
+.link1:hover::after,
+.link2:hover::after,
+.link3:hover::after,
+.link4:hover::after,
+.link5:hover::after {
+  width: 100%;
+}
+
 @keyframes changeLink1 {
   from {
     opacity: 0;
@@ -696,9 +659,16 @@ a {
   .grid-section {
     grid-template-columns: 400px 400px;
   }
+  .main-project-container {
+    height: 1000px;
+    margin: {
+      top: 210px;
+      bottom: 1000px;
+    }
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   .burger-button {
     display: block;
     background-color: transparent;
@@ -728,9 +698,78 @@ a {
     grid-template-columns: 400px;
     row-gap: 50px;
   }
+  .about-position {
+    position: sticky;
+    top: 100px;
+  }
+
+  .project-container {
+    position: sticky;
+    top: 200px;
+    margin-bottom: 260px;
+    z-index: 10;
+  }
+  .project-container-gal {
+    position: sticky;
+    top: 250px;
+    margin-bottom: 210px;
+    z-index: 11;
+  }
+
+  .project-container-thae {
+    position: sticky;
+    top: 300px;
+    margin-bottom: 160px;
+    z-index: 12;
+  }
+
+  .project-container-exampl {
+    position: sticky;
+    top: 350px;
+    margin-bottom: 110px;
+    z-index: 13;
+  }
+  .project-container-example1 {
+    position: sticky;
+    top: 400px;
+    margin-bottom: 60px;
+    z-index: 14;
+  }
+  .project-container-example2 {
+    position: sticky;
+    top: 450px;
+    z-index: 15;
+  }
+
+  .main-project-container {
+    height: 2550px;
+    margin: {
+      top: 210px;
+      bottom: 1000px;
+    }
+  }
+  .skills-grid {
+    gap: 10px;
+    grid-template-columns: 100px 100px 100px 100px;
+  }
+
+  .current-grid {
+    gap: 10px;
+    grid-template-columns: 100px;
+  }
+
+  .icon-container,
+  .icon-container-current {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skills-container i {
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .about-me-container {
     margin-top: 300px;
   }
@@ -763,16 +802,13 @@ a {
   }
   .input-info {
     width: 150px;
-    padding: 15px 15px;
+    padding: 15px;
   }
 
-  .input-subject-info {
-    width: 340px;
-    padding: 15px 15px;
-  }
-
+  .input-subject-info,
   .input-message-info {
-    width: 330px;
+    width: 340px;
+    padding: 15px;
   }
 
   .form-submit-button {
@@ -798,52 +834,5 @@ a {
 
   .skills-container i {
     font-size: 1.5rem;
-  }
-
-  .about-position {
-    position: sticky;
-    top: 100px;
-  }
-
-  .project-container {
-    position: sticky;
-    top: 200px;
-    margin-bottom: 260px;
-    z-index: 10;
-  }
-  .project-container-gal {
-    position: sticky;
-    top: 250px;
-    margin-bottom: 210px;
-    z-index: 11;
-  }
-
-  .project-container-thae {
-    position: sticky;
-    top: 300px;
-    margin-bottom: 160px;
-    z-index: 12;
-  }
-
-  .project-container-example {
-    position: sticky;
-    top: 350px;
-    margin-bottom: 110px;
-    z-index: 13;
-  }
-  .project-container-example1 {
-    position: sticky;
-    top: 400px;
-    margin-bottom: 60px;
-    z-index: 14;
-  }
-  .project-container-example2 {
-    position: sticky;
-    top: 450px;
-    z-index: 15;
-  }
-
-  .main-project-container {
-    height: 2550px;
   }
 }

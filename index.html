@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- ADD CSS STYLES -->
   <link rel="stylesheet" href="styles/index.css" />
-  <link rel="icon" type="image/x-icon" href="img/my-logo.jpg">
   <!-- COMFORTAA FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +13,12 @@
   <!-- APP ICONS -->
   <script src="https://kit.fontawesome.com/4b11705643.js" crossorigin="anonymous"></script>
   <title>heeeyooo</title>
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="img/my-logo.jpg">
 </head>
 
-<body>
-  <!-- BURGER MENU -->
+<body style="background-color: white;">
+  <!-- MOBILE MENU SECTION -->
   <div id="myDIV" class="menu-container">
     <button class="exit-menu-button" id="closeBtn"><i class="fa-solid fa-xmark js-but"></i></button>
     <div class="link-menu-container">
@@ -43,11 +44,14 @@
       </a>
     </div>
   </div>
-  <!-- NAVIGATION -->
+  <!-- HEADER SECTION -->
+  <audio src="Minecraft.mp3" type="audio/mpeg" id="music"></audio>
   <header id="js-scroll" class="header">
     <a href="index.html"><img id="img-change" class="logo-image" src="img/my-logo-black.png" alt="heeeyooo"></a>
-    <button class="day-night-style" id="day-night-button" title="Double click!">Night</button>
-    <button class="song-button" id="music-button"><i class="fa-solid fa-play"></i></button>
+    <div class="new-features">
+      <button class="day-night-style" id="day-night-button"><i class="fa-solid fa-moon"></i></button>
+      <button class="song-button" id="music-button"><i class="fa-solid fa-play"></i></button>
+    </div>
     <button id="openBtn" class="burger-button"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
     <nav class="nav">
       <ul>
@@ -61,35 +65,36 @@
       </ul>
     </nav>
   </header>
-  <audio src="Minecraft.mp3" type="audio/mpeg" id="music"></audio>
-  <div class="about-me-container">
+  <!-- ABOUT ME SECTION -->
+  <main>
+    <div class="about-me-container">
 
-    <p class="main-info-about-me">Hi, I'm Stepan Dordiai<br>Front end Developer</p>
-    <p class="info-about-me">I spend my time as a front end developer<br>
-      <span class="opac1">I like to integrate new interesting ideas for websites and applications</span><br><span
-        class="opac2">I'm
-        always
-        excited to learn
-        something new</span><br><span class="opac3">In my free time I work out at the gym</span>
-    </p>
-    <a href="heeeyooo-resume.pdf" download="">
-      <button class="resume-button">Download CV</button>
-    </a>
-  </div>
-  <!-- PORTFOLIO CONTAINER -->
+      <p class="main-info-about-me">Hi, I'm Stepan Dordiai<br>Front end Developer</p>
+      <p class="info-about-me">I spend my time as a front end developer<br>
+        <span class="opac1">I like to integrate new interesting ideas for websites and applications</span><br><span
+          class="opac2">I'm
+          always
+          excited to learn
+          something new</span><br><span class="opac3">In my free time I work out at the gym</span>
+      </p>
+      <a href="heeeyooo-resume.pdf" download="">
+        <button class="resume-button">Download CV</button>
+      </a>
+    </div>
+  </main>
+
+  <!-- PORTFOLIO SECTION -->
   <div class="main-project-container js-project" id="section2">
     <div class="about-position">
-      <p class="main-portfolio-info">Recent Work</p>
+      <p class="main-portfolio-info">Projects</p>
       <p class="portfolio-info">Here are a few past design projects I've worked on.</p>
     </div>
     <div class="grid-section">
       <div class="project-container">
-        <a class="project-link-amazon" href="javascript-amazon-project/amazon.html" target="_blank"><img
-            class="img-phone" src="img/Amazon-img-phone.JPG" alt=""></a>
-        <div
-          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center; color: black;">
-          <p>Amazon Clone</p>
-          <div>
+        <div class="content-item">
+          <a class="project-link-a" href="https://heeeyooo-fate.netlify.app" target="_blank">fate.com</a>
+          <div
+            style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
             <i class="fa-brands fa-html5"></i>
             <i class="fa-brands fa-css3-alt"></i>
             <i class="fa-brands fa-square-js"></i>
@@ -97,108 +102,130 @@
         </div>
       </div>
       <div class="project-container-gal">
-        <a class="project-link-gal" href="https://heeeyooo-gallery.netlify.app/" target="_blank"> <img class="img-phone"
-            src="img/Gallery-img-phone.jpg" alt=""></a>
-
-        <div
-          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center; color: black;">
-          <p>Gallery</p>
-          <p>In process<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span> </p>
-          <div>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-          </div>
-        </div>
-      </div>
-      <div class="project-container-thae">
-        <a class="project-link-thea" href="https://heeeyooo-theatre.netlify.app" target="_blank"></a>
-        <div
-          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
-          <p>Theatre</p>
-          <p>In process<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span> </p>
-          <div>
+        <div class="content-item">
+          <a class="project-link-a" href="https://heeeyooo-gallery.netlify.app" target="_blank">gallery.com</a>
+          <div
+            style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
             <i class="fa-brands fa-html5"></i>
             <i class="fa-brands fa-css3-alt"></i>
             <i class="fa-brands fa-square-js"></i>
           </div>
         </div>
       </div>
-      <div class="project-container-example">
-        <a class="project-link-example" href="https://heeeyooo-theatre.netlify.app" target="_blank"></a>
-        <div
-          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
-          <p>Example</p>
-
+      <div class="project-container-thae">
+        <div class="content-item">
+          <a class="project-link-a" href="https://heeeyooo-theatre.netlify.app" target="_blank">theatre.com</a>
+          <div
+            style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-container-exampl">
+        <div class="content-item">
+          <a class="project-link-a" href="https://deft-wisp-053bdd.netlify.app" target="_blank">amazon-clone.com</a>
+          <div
+            style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js"></i>
+          </div>
         </div>
       </div>
       <div class="project-container-example1">
-        <a class="project-link-example1" href="https://heeeyooo-theatre.netlify.app" target="_blank"></a>
-        <div
-          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
-          <p>Example</p>
-
+        <div class="content-item">
+          <a class="project-link-a" href="https://graceful-beijinho-d8cc5c.netlify.app"
+            target="_blank">practice-react.com</a>
+          <div
+            style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js"></i>
+          </div>
         </div>
       </div>
       <div class="project-container-example2">
-        <a class="project-link-example2" href="https://heeeyooo-theatre.netlify.app" target="_blank"></a>
-        <div
-          style="display: flex; background-color: transparent; width: 100%; justify-content: space-between; align-items: center;">
-          <p>Example</p>
-
+        <div class="content-item">
+          <a class="project-link-a" href="https://heeeyooo-react.netlify.app" target="_blank">portfolio-react.com</a>
+          <div
+            style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-square-js"></i>
+          </div>
         </div>
       </div>
-      <!-- <div class="project-container">
-        <a class="project-link" href="calculator.html" target="_blank">Calculator v1.0</a>
-
-      </div> -->
     </div>
   </div>
   <!-- SKILLS SECTION -->
   <div class="skills-container js-skills" id="section4">
     <p style="font-size: 40px; font-weight: bold;">Skills</p>
     <div class="skills-grid">
-      <div class="icon-container js-skills1">
-        <i class="fa-brands fa-python"></i>
+      <div style="position: relative;" class="icon-container js-skills1">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar">
+        </div>
+        <i title="Click me!" style="z-index: 3;" onclick="move(75, 'green')" class="fa-brands fa-python"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo"></p>
       </div>
-      <div class="icon-container js-skills2">
-        <i class="fa-brands fa-css3-alt"></i>
-
-
+      <div style="position: relative;" class="icon-container js-skills2">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar1">
+        </div>
+        <i style="z-index: 3;" onclick="move1(65, 'blue')" class="fa-brands fa-css3-alt"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo1"></p>
       </div>
-      <div class="icon-container js-skills3">
-        <i class="fa-brands fa-html5"></i>
-
-
+      <div style="position: relative;" class="icon-container js-skills3">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar2">
+        </div>
+        <i style="z-index: 3;" onclick="move2(82, 'red')" class="fa-brands fa-html5"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo2"></p>
       </div>
-      <div class="icon-container js-skills4">
-        <i class="fa-brands fa-git-alt"></i>
-
+      <div style="position: relative;" class="icon-container js-skills4">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar3">
+        </div>
+        <i style="z-index: 3;" onclick="move3(52, 'orange')" class="fa-brands fa-git-alt"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo3"></p>
       </div>
-      <div class="icon-container js-skills5">
-        <i class="fa-brands fa-github"></i>
+      <div style="position: relative;" class="icon-container js-skills5">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar4">
+        </div>
+        <i style="z-index: 3;" onclick="move4(52, 'orange')" class="fa-brands fa-github"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo4"></p>
       </div>
-      <div class="icon-container js-skills6">
-        <i class="fa-brands fa-square-js"></i>
+      <div style="position: relative;" class="icon-container js-skills6">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar5">
+        </div>
+        <i style="z-index: 3;" onclick="move5(56, 'yellow')" class="fa-brands fa-square-js"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo5"></p>
       </div>
-      <div class="icon-container js-skills7">
-        <i class="fa-brands fa-sass"></i>
+      <div style="position: relative;" class="icon-container js-skills7">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar6">
+        </div>
+        <i style="z-index: 3;" onclick="move6(87, 'pink')" class="fa-brands fa-sass"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo6"></p>
       </div>
     </div>
     <p>Currently learning</p>
     <div class="current-grid">
-      <div class="icon-container-current js-skills8">
-        <i class="fa-brands fa-react"></i>
+      <div style="position: relative;" class="icon-container-current js-skills8">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; border-radius: 10px; z-index: 2;" id="myBar7">
+        </div>
+        <i style="z-index: 3;" onclick="move7(1, 'skyblue')" class="fa-brands fa-react"></i>
+        <p style=" position: absolute; bottom: 0; display: none; font-size: 2vw; z-index: 2;" id="demo7"></p>
       </div>
-
     </div>
-
-
+    <p class="loading-text" style="font-size: 10px;">Click the icon to see my skill progress based on <img width="30px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/W3Schools_logo.svg/150px-W3Schools_logo.svg.png"
+        alt=""></p>
   </div>
-  <!-- FORM CONTAINER -->
+  <!-- CONTACT ME SECTIOM -->
   <div class="main-form-container js-contact" id="section3">
     <div class="form-container">
       <p class="info-contact-me">Contact me</p>
       <form action="mailto:hokageow@icloud.com" method="post" enctype="text/plain">
+        <!-- <fieldset style="box-sizing: border-box; border-radius: 25px; border: 2px solid rgb(225, 225, 225);"> -->
+        <!-- <legend style="text-align: center; font-size: 32px;">Contact me</legend> -->
         <div
           style="display: flex; flex-direction: row; justify-content: center; margin-top: 50px; margin-bottom: 10px;">
           <div style="margin-right: 5px;">
@@ -231,6 +258,8 @@
         <div style="text-align: center;">
           <input class="form-submit-button" type="submit" value="Submit">
         </div>
+        <!-- </fieldset> -->
+
       </form>
     </div>
   </div>
@@ -255,9 +284,10 @@
       </a>
     </div>
   </footer>
+  <!-- TO TOP BUTTON -->
   <button id="toTopBtn" class="style-to-top-btn" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></button>
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
-
 </body>
 
 </html>
