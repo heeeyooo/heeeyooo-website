@@ -1,121 +1,65 @@
-const x = document.getElementById("myDIV");
+const mobileMenu = document.getElementById("mobile-menu");
 const closeButton = document.getElementById("closeBtn");
 const openButton = document.getElementById("openBtn");
+const linkText = document.querySelectorAll(".js-text");
+// OPEN MENU BUTTON
 openButton.addEventListener("click", () => {
-  x.style.display = "flex";
+  mobileMenu.style.display = "flex";
   document.body.style.overflowY = "hidden";
 });
+// CLOSE MENU BUTTON
 closeButton.addEventListener("click", () => {
-  x.style.display = "none";
+  mobileMenu.style.display = "none";
   document.body.style.overflowY = "auto";
 });
-document.getElementById("portfolio-js").addEventListener("click", () => {
-  x.style.display = "none";
-  document.body.style.overflowY = "auto";
-});
-document.getElementById("contact-me-js").addEventListener("click", () => {
-  x.style.display = "none";
-  document.body.style.overflowY = "auto";
-});
-document.getElementById("skills-js").addEventListener("click", () => {
-  x.style.display = "none";
-  document.body.style.overflowY = "auto";
+// CLOSE MENU ONCLICK TEXT LINK
+linkText.forEach((elem) => {
+  elem.addEventListener("click", () => {
+    mobileMenu.style.display = "none";
+    document.body.style.overflowY = "auto";
+  });
 });
 
-const dayNight = document.getElementById("day-night-button");
-dayNight.addEventListener("click", () => {
+const darkModeBtn = document.getElementById("day-night-button");
+const inputColor = document.querySelectorAll(".input-color");
+const iconColor = document.querySelectorAll(".icon-color");
+const mainLogo = document.querySelectorAll(".js-logo");
+// DARK MODE BUTTON
+darkModeBtn.addEventListener("click", () => {
   if (document.body.style.backgroundColor === "white") {
-    dayNight.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+    darkModeBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
-    document.querySelector(".js-img").src = "img/my-logo-black.png";
-    document.querySelector(".js-footer").style.backgroundColor = "white";
-    document.querySelector(".js-icon").style.color = "black";
-    document.querySelector(".js-icon1").style.color = "black";
-    document.querySelector(".js-icon2").style.color = "black";
-    document.querySelector(".js-icon3").style.color = "black";
-    document.querySelector(".js-icon4").style.color = "black";
-    x.style.backgroundColor = "black";
-    document.querySelector(".js-but").style.color = "white";
-    document.querySelector(".js-text1").style.color = "white";
-    document.querySelector(".js-text2").style.color = "white";
-    document.querySelector(".js-text3").style.color = "white";
-    document.querySelector(".js-text4").style.color = "white";
-    document.querySelector(".js-text5").style.color = "white";
-    document.querySelector(".js-menu").style.color = "white";
-    document.querySelector(".js-menu1").style.color = "white";
-    document.querySelector(".js-menu2").style.color = "white";
-    document.querySelector(".js-menu3").style.color = "white";
-    document.querySelector(".js-menu4").style.color = "white";
-    document.querySelector(".js-contact").style.backgroundColor = "black";
-    document.querySelector(".js-contact").style.color = "white";
-    document.querySelector(".js-project").style.backgroundColor = "black";
-    document.querySelector(".js-project").style.color = "white";
-    document.querySelector(".js-skills").style.backgroundColor = "black";
-    document.querySelector(".js-skills").style.color = "white";
-    document.querySelector(".js-skills1").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills2").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills3").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills4").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills5").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills6").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills7").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".js-skills8").style.backgroundColor =
-      "rgb(30, 30, 30)";
-    document.querySelector(".main-quote").style.color = "black";
+    mainLogo.forEach((elem) => {
+      elem.src = "img/my-logo-white.png";
+    });
+    iconColor.forEach((elem) => {
+      elem.style.color = "white";
+    });
+    linkText.forEach((elem) => {
+      elem.style.color = "white";
+    });
+    mobileMenu.style.backgroundColor = "black";
+    inputColor.forEach((elem) => {
+      elem.style.color = "white";
+    });
   } else {
-    dayNight.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+    darkModeBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
-    document.querySelector(".js-img").src = "img/my-logo-white.png";
-    document.querySelector(".js-footer").style.backgroundColor = "black";
-    document.querySelector(".js-icon").style.color = "white";
-    document.querySelector(".js-icon1").style.color = "white";
-    document.querySelector(".js-icon2").style.color = "white";
-    document.querySelector(".js-icon3").style.color = "white";
-    document.querySelector(".js-icon4").style.color = "white";
-    x.style.backgroundColor = "white";
-    document.querySelector(".js-but").style.color = "black";
-    document.querySelector(".js-text1").style.color = "black";
-    document.querySelector(".js-text2").style.color = "black";
-    document.querySelector(".js-text3").style.color = "black";
-    document.querySelector(".js-text4").style.color = "black";
-    document.querySelector(".js-text5").style.color = "black";
-    document.querySelector(".js-menu").style.color = "black";
-    document.querySelector(".js-menu1").style.color = "black";
-    document.querySelector(".js-menu2").style.color = "black";
-    document.querySelector(".js-menu3").style.color = "black";
-    document.querySelector(".js-menu4").style.color = "black";
-    document.querySelector(".js-contact").style.backgroundColor = "white";
-    document.querySelector(".js-contact").style.color = "black";
-    document.querySelector(".js-project").style.backgroundColor = "white";
-    document.querySelector(".js-project").style.color = "black";
-    document.querySelector(".js-skills").style.backgroundColor = "white";
-    document.querySelector(".js-skills").style.color = "black";
-    document.querySelector(".js-skills1").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills2").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills3").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills4").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills5").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills6").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills7").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".js-skills8").style.backgroundColor =
-      "rgb(245, 245, 245)";
-    document.querySelector(".main-quote").style.color = "white";
+    mainLogo.forEach((elem) => {
+      elem.src = "img/my-logo-black.png";
+    });
+    iconColor.forEach((elem) => {
+      elem.style.color = "black";
+    });
+    linkText.forEach((elem) => {
+      elem.style.color = "black";
+    });
+    mobileMenu.style.backgroundColor = "white";
+    inputColor.forEach((elem) => {
+      elem.style.color = "black";
+    });
   }
 });
 

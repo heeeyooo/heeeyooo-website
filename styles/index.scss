@@ -17,7 +17,6 @@ html {
 
 body {
   font-family: Comfortaa, serif;
-  background-color: white;
   color: black;
   margin: 0;
 }
@@ -32,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $bgheader;
+  background: $bg-basic;
   @include backdropFilter(blur(10px));
   padding: 0 20px;
   z-index: 60;
@@ -40,7 +39,7 @@ body {
   border-radius: 50px;
 }
 
-.logo-image {
+.logo-header {
   width: 80px;
 }
 
@@ -51,7 +50,7 @@ body {
 }
 
 .new-features:hover {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(149, 149, 149, 0.5);
 }
 
 .new-features:hover .day-night-style {
@@ -65,15 +64,16 @@ body {
   height: 50px;
   padding: 0;
   font-size: 24px;
-  color: black;
   border: none;
   cursor: pointer;
+  color: black;
   background-color: transparent;
   transition: all 0.5s;
 }
 
 .burger-button {
   display: none;
+  color: black;
 }
 
 .nav {
@@ -97,18 +97,12 @@ a {
 }
 
 .nav a {
-  border-radius: 50px;
-  transition: all 0.3s;
-}
-
-.nav a:hover {
-  background-color: rgb(232, 232, 232);
-  padding: 10px 10px;
+  font-weight: 100;
 }
 
 /* ABOUT ME SECTION */
 .about-me-container {
-  margin-top: 250px;
+  padding-top: 250px;
   text-align: center;
   z-index: 1;
 }
@@ -176,17 +170,42 @@ a {
 
 /* PORTFOLIO SECTION */
 .main-project-container {
-  background-color: white;
-  color: black;
+  // background: transparent;
+  // color: black;
   width: 100%;
-  height: 500px;
+  // height: 500px;
   // SCSS PROPERTY
   margin: {
     top: 210px;
-    bottom: 500px;
+    // bottom: 500px;
   }
   padding-top: 100px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  background: linear-gradient(
+    89deg,
+    #32389b,
+    #2cd8db,
+    #94a5e4,
+    #fd5f81,
+    #283cbe
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .main-portfolio-info {
@@ -196,10 +215,12 @@ a {
     weight: bold;
   }
   margin: 0;
+  color: white !important;
 }
 
 .portfolio-info {
   font-size: 18px;
+  color: white !important;
 }
 
 .grid-section {
@@ -220,34 +241,53 @@ a {
   position: relative;
   width: 400px;
   height: 340px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
+  background: $bg-basic;
   border-radius: 50px;
 }
 
-.project-container {
-  background-image: url(/img/gym.JPG);
+.project-container1,
+.project-container2,
+.project-container3,
+.project-container4,
+.project-container5,
+.project-container6 {
+  position: relative;
+  width: 400px;
+  height: 340px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 25px;
+  scale: 0.8;
 }
 
-.project-container-example2 {
-  background-color: rgb(71, 224, 255);
+.project-container1 {
+  background-image: url(/img/gym-site.jpg);
 }
 
-.project-container-gal {
-  background-image: url(/img/Gallery-img.JPG);
+.project-container2 {
+  background-image: url(/img/art-portfolio1.jpg);
 }
 
-.project-container-thae {
+.project-container3 {
   background-image: url(/img/theatre.jpg);
 }
 
-.project-container-exampl {
+.project-container4 {
   background-image: url(/img/Amazon-img.JPG);
 }
 
-.project-container-example1 {
-  background-color: rgb(250, 93, 93);
+.project-container5 {
+  background-color: rgb(28, 252, 125);
+}
+
+.project-container6 {
+  background-color: rgb(252, 92, 92);
 }
 
 .content-item {
@@ -280,13 +320,13 @@ a {
 
 /* SKILLS SECTION*/
 .skills-container {
-  background-color: white;
-  color: black;
+  background: transparent;
+  // color: black;
   width: 100%;
-  height: 700px;
-  margin-top: 210px;
-  margin-bottom: 500px;
-  padding-top: 100px;
+  // height: 700px;
+  // margin-top: 210px;
+  // margin-bottom: 500px;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -323,7 +363,8 @@ a {
   align-items: center;
   width: 200px;
   height: 200px;
-  background-color: rgb(245, 245, 245);
+  background: $bg-basic;
+
   border-radius: 10px;
   cursor: pointer;
 }
@@ -332,7 +373,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(245, 245, 245);
+  background: $bg-basic;
+
   border-radius: 10px;
   width: 200px;
   height: 200px;
@@ -345,7 +387,7 @@ a {
   right: 0;
   left: 0;
   min-height: 900px;
-  background-color: white;
+  background: transparent;
 }
 
 .form-container {
@@ -359,13 +401,20 @@ a {
   background-color: transparent;
 }
 
+// INPUT TEXT COLOR
+input,
+textarea {
+  color: #000;
+}
+
 .info-contact-me {
   font-size: 3rem;
   text-align: center;
 }
 
 .input-info {
-  background-color: rgb(245, 245, 245);
+  background: $bg-basic;
+
   width: 250px;
   padding: 20px;
   border: none;
@@ -374,12 +423,13 @@ a {
 }
 
 .input-subject-info {
-  background-color: rgb(245, 245, 245);
+  background: $bg-basic;
   width: 550px;
   padding: 20px;
   border: none;
   border-radius: 10px;
   outline: none;
+  z-index: 0;
 }
 
 .input-message-info {
@@ -389,28 +439,34 @@ a {
   padding: 20px;
   width: 550px;
   border-radius: 10px;
-  background-color: rgb(245, 245, 245);
+  background: $bg-basic;
   outline: none;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: rgb(150, 150, 150);
+}
+
 .form-submit-button {
-  background-color: white;
+  font-family: Comfortaa, serif;
+  font-weight: 100;
+  background: black;
   font-size: 16px;
-  border: none;
-  border: 1px solid black;
+  border: 2px solid white;
   padding: 20px 60px;
   cursor: pointer;
-  color: black;
-  border-radius: 10px;
-  transition: all 0.5s;
+  color: white;
+  border-radius: 15px;
+  transition: all 0.15s;
 }
 
 .form-submit-button:hover {
-  transform: scale(1.1);
-  color: white;
-  box-shadow: inset 65px 0 0 black, inset -65px 0 0 black, inset 0 50px 0 black,
-    inset 0 -50px 0 black;
-  border: none;
+  background-color: rgb(81, 81, 81);
+}
+
+.form-submit-button:active {
+  background-color: rgb(122, 122, 122);
 }
 
 /* FOOTER SECTION */
@@ -420,7 +476,7 @@ a {
   bottom: 0;
   left: 0;
   height: 500px;
-  background-color: black;
+  background: $bg-basic;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -428,18 +484,17 @@ a {
   border-radius: 50px 50px 0 0;
 }
 
-.logo-image-footer {
+.logo-footer {
   width: 100px;
 }
 
-.link-img-footer {
+.link-logo-footer {
   display: inline-block;
   margin: 0 auto;
 }
 
 .main-quote {
   text-align: center;
-  color: white;
 }
 
 .only-word {
@@ -469,7 +524,7 @@ a {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 24px;
-  color: white;
+  color: black;
   transition: color 0.15s;
 }
 
@@ -489,23 +544,18 @@ a {
 }
 
 .exit-menu-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include project-flex-centered();
   position: fixed;
   top: 100px;
   width: 50px;
   height: 50px;
-  border-radius: 25px;
+  color: black;
+  border-radius: 50%;
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-size: 24px;
   animation: changeExitButton 1s;
-}
-
-.exit-menu-button i {
-  color: black;
 }
 
 @keyframes changeExitButton {
@@ -570,7 +620,7 @@ a {
 .link5::after {
   content: "";
   position: absolute;
-  height: 4px;
+  height: 2px;
   left: 0;
   bottom: 0;
   width: 0;
@@ -628,7 +678,7 @@ a {
   right: 30px;
   z-index: 99;
   border: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: $bg-basic;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: black;
@@ -660,10 +710,10 @@ a {
     grid-template-columns: 400px 400px;
   }
   .main-project-container {
-    height: 1000px;
+    // height: 1200px;
     margin: {
       top: 210px;
-      bottom: 1000px;
+      // bottom: 1000px;
     }
   }
 }
@@ -675,10 +725,6 @@ a {
     border: none;
     cursor: pointer;
     font-size: 24px;
-  }
-
-  .fa-xmark {
-    color: white;
   }
 
   .nav {
@@ -699,6 +745,10 @@ a {
     row-gap: 50px;
   }
   .about-position {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: sticky;
     top: 100px;
   }
@@ -742,11 +792,12 @@ a {
   }
 
   .main-project-container {
-    height: 2550px;
+    height: 2590px;
     margin: {
       top: 210px;
-      bottom: 1000px;
+      // bottom: 500px;
     }
+    padding-bottom: 1000px;
   }
   .skills-grid {
     gap: 10px;
@@ -771,7 +822,7 @@ a {
 
 @media screen and (max-width: 600px) {
   .about-me-container {
-    margin-top: 300px;
+    padding-top: 300px;
   }
   .main-info-about-me {
     font-size: 30px;

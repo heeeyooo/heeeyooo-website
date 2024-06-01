@@ -19,55 +19,58 @@
 
 <body style="background-color: white;">
   <!-- MOBILE MENU SECTION -->
-  <div id="myDIV" class="menu-container">
-    <button class="exit-menu-button" id="closeBtn"><i class="fa-solid fa-xmark js-but"></i></button>
+  <div id="mobile-menu" class="menu-container">
+    <button class="exit-menu-button icon-color" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
     <div class="link-menu-container">
-      <a class="link1 js-text1" href="index.html">Home</a>
-      <a class="link2 js-text2" href="heeeyooo-resume.pdf">Resume</a>
-      <a id="portfolio-js" class="link3 js-text3" href="#section2">Portfolio</a>
-      <a id="skills-js" class="link4 js-text4" href="#section4">Skills</a>
-
-      <a id="contact-me-js" class="link5 js-text5" href="#section3">Contact me</a>
+      <a class="link1 js-text" href="#section1">Home</a>
+      <a class="link2 js-text" href="heeeyooo-resume.pdf">Resume</a>
+      <a class="link3 js-text" href="#section2">Portfolio</a>
+      <a class="link4 js-text" href="#section4">Skills</a>
+      <a class="link5 js-text" href="#section3">Contact me</a>
     </div>
 
     <div class="info-icon2">
-      <a class="js-menu" href="https://github.com/heeeyooo" target="_blank"><i class="fa-brands fa-github"></i>
+      <a class="icon-color" href="https://github.com/heeeyooo" target="_blank"><i class="fa-brands fa-github"></i>
       </a>
-      <a class="js-menu1" href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
+      <a class="icon-color" href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
         target="_blank"><i class="fa-brands fa-instagram"></i>
       </a>
-      <a class="js-menu2" href="https://www.facebook.com/stepan.dordyay.5" target="_blank"><i
+      <a class="icon-color" href="https://www.facebook.com/stepan.dordyay.5" target="_blank"><i
           class="fa-brands fa-facebook"></i></a>
-      <a class="js-menu3" href="https://twitter.com/Heeeyooo_" target="_blank"><i
+      <a class="icon-color" href="https://twitter.com/Heeeyooo_" target="_blank"><i
           class="fa-brands fa-x-twitter"></i></a>
-      <a class="js-menu4" href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa-brands fa-twitch"></i>
+      <a class="icon-color" href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa-brands fa-twitch"></i>
+      </a>
+      <a class="icon-color" href="https://www.linkedin.com/in/stepan-dordiai-245715310" target="_blank"><i
+          class="fa-brands fa-linkedin"></i>
       </a>
     </div>
   </div>
   <!-- HEADER SECTION -->
-  <audio src="Minecraft.mp3" type="audio/mpeg" id="music"></audio>
+  <audio src="Bloody-Mary(PagalWorld).mp3" type="audio/mpeg" id="music"></audio>
   <header id="js-scroll" class="header">
-    <a href="index.html"><img id="img-change" class="logo-image" src="img/my-logo-black.png" alt="heeeyooo"></a>
+    <a href="index.html"><img class="logo-header js-logo" src="img/my-logo-black.png" alt="heeeyooo"></a>
     <div class="new-features">
-      <button class="day-night-style" id="day-night-button"><i class="fa-solid fa-moon"></i></button>
-      <button class="song-button" id="music-button"><i class="fa-solid fa-play"></i></button>
+      <button class="day-night-style icon-color" id="day-night-button"><i class="fa-solid fa-moon"></i></button>
+      <button class="song-button icon-color" id="music-button"><i class="fa-solid fa-play"></i></button>
     </div>
-    <button id="openBtn" class="burger-button"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
+    <button id="openBtn" class="burger-button icon-color"><i class="fa-solid fa-bars"></i></button>
     <nav class="nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heeeyooo-resume.pdf">Resume</a>
+        <li><a class="link1 js-text" href="#section1">Home</a></li>
+        <li><a class="link2 js-text" href="heeeyooo-resume.pdf" target="_blank">Resume</a>
         </li>
-        <li><a href="#section2">Portfolio</a>
+        <li><a class="link3 js-text" href="#section2">Portfolio</a>
         </li>
-        <li><a href="#section3">Contact me</a>
+        <a class="link4 js-text" href="#section4">Skills</a>
+        <li><a class="link5 js-text" href="#section3">Contact me</a>
         </li>
       </ul>
     </nav>
   </header>
   <!-- ABOUT ME SECTION -->
   <main>
-    <div class="about-me-container">
+    <div class="about-me-container" id="section1">
 
       <p class="main-info-about-me">Hi, I'm Stepan Dordiai<br>Front end Developer</p>
       <p class="info-about-me">I spend my time as a front end developer<br>
@@ -84,13 +87,16 @@
   </main>
 
   <!-- PORTFOLIO SECTION -->
-  <div class="main-project-container js-project" id="section2">
+  <div class="main-project-container" id="section2">
     <div class="about-position">
       <p class="main-portfolio-info">Projects</p>
       <p class="portfolio-info">Here are a few past design projects I've worked on.</p>
     </div>
     <div class="grid-section">
       <div class="project-container">
+        <div class="project-container1">
+
+        </div>
         <div class="content-item">
           <a class="project-link-a" href="https://heeeyooo-fate.netlify.app" target="_blank">fate.com</a>
           <div
@@ -102,8 +108,11 @@
         </div>
       </div>
       <div class="project-container-gal">
+        <div class="project-container2">
+
+        </div>
         <div class="content-item">
-          <a class="project-link-a" href="https://heeeyooo-gallery.netlify.app" target="_blank">gallery.com</a>
+          <a class="project-link-a" href="https://heeeyooo-gallery.netlify.app" target="_blank">Gray.com</a>
           <div
             style="position: absolute; bottom: 10px; right: 0; left: 0; margin-left: auto; margin-right: auto; color: white; font-size: 24px;">
             <i class="fa-brands fa-html5"></i>
@@ -113,6 +122,9 @@
         </div>
       </div>
       <div class="project-container-thae">
+        <div class="project-container3">
+
+        </div>
         <div class="content-item">
           <a class="project-link-a" href="https://heeeyooo-theatre.netlify.app" target="_blank">theatre.com</a>
           <div
@@ -124,6 +136,9 @@
         </div>
       </div>
       <div class="project-container-exampl">
+        <div class="project-container4">
+
+        </div>
         <div class="content-item">
           <a class="project-link-a" href="https://deft-wisp-053bdd.netlify.app" target="_blank">amazon-clone.com</a>
           <div
@@ -135,6 +150,9 @@
         </div>
       </div>
       <div class="project-container-example1">
+        <div class="project-container5">
+
+        </div>
         <div class="content-item">
           <a class="project-link-a" href="https://graceful-beijinho-d8cc5c.netlify.app"
             target="_blank">practice-react.com</a>
@@ -147,6 +165,9 @@
         </div>
       </div>
       <div class="project-container-example2">
+        <div class="project-container6">
+
+        </div>
         <div class="content-item">
           <a class="project-link-a" href="https://heeeyooo-react.netlify.app" target="_blank">portfolio-react.com</a>
           <div
@@ -160,7 +181,7 @@
     </div>
   </div>
   <!-- SKILLS SECTION -->
-  <div class="skills-container js-skills" id="section4">
+  <div class="skills-container" id="section4">
     <p style="font-size: 40px; font-weight: bold;">Skills</p>
     <div class="skills-grid">
       <div style="position: relative;" class="icon-container js-skills1">
@@ -220,39 +241,40 @@
         alt=""></p>
   </div>
   <!-- CONTACT ME SECTIOM -->
-  <div class="main-form-container js-contact" id="section3">
+  <div class="main-form-container" id="section3">
     <div class="form-container">
       <p class="info-contact-me">Contact me</p>
       <form action="mailto:hokageow@icloud.com" method="post" enctype="text/plain">
-        <!-- <fieldset style="box-sizing: border-box; border-radius: 25px; border: 2px solid rgb(225, 225, 225);"> -->
-        <!-- <legend style="text-align: center; font-size: 32px;">Contact me</legend> -->
         <div
           style="display: flex; flex-direction: row; justify-content: center; margin-top: 50px; margin-bottom: 10px;">
           <div style="margin-right: 5px;">
-            <input class="input-info" type="text" id="first-name" name="First Name" placeholder="First Name *">
+            <input class="input-info input-color" type="text" id="first-name" name="First Name"
+              placeholder="First Name *">
           </div>
           <div style="margin-left: 5px;">
-            <input class="input-info" type="text" id="last-name" name="Last Name" placeholder="Last Name *">
+            <input class="input-info input-color" type="text" id="last-name" name="Last Name" placeholder="Last Name *">
           </div>
         </div>
         <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 10px;">
           <div style="margin-right: 5px;">
-            <input class="input-info" type="email" id="email" name="Email" placeholder="Email *">
+            <input class="input-info input-color" type="email" id="email" name="Email" placeholder="Email *">
           </div>
           <div style="margin-left: 5px;">
-            <input class="input-info" type="tel" id="phone-number" name="Phone Number" placeholder="Phone Number *">
+            <input class="input-info input-color" type="tel" id="phone-number" name="Phone Number"
+              placeholder="Phone Number *">
           </div>
         </div>
         <div style="display: flex; justify-content: center; margin-bottom: 10px;">
           <div>
-            <input type="text" class="input-subject-info" id="subject" name="Subject" placeholder="Subject *">
+            <input type="text" class="input-subject-info input-color" id="subject" name="Subject"
+              placeholder="Subject *">
           </div>
         </div>
         <div style="display: flex; justify-content: center; margin-bottom: 50px;">
           <div>
 
-            <textarea class="input-message-info" name="Message" id="message" placeholder="Message *" minlength="10"
-              rows="10"></textarea>
+            <textarea class="input-message-info input-color" name="Message" id="message" placeholder="Message *"
+              minlength="10" rows="10"></textarea>
           </div>
         </div>
         <div style="text-align: center;">
@@ -265,27 +287,31 @@
   </div>
   <!-- FOOTER SECTION -->
   <footer class="footer-section js-footer">
-    <a class="link-img-footer" href="index.html"><img class="logo-image-footer js-img" src="img/my-logo-white.png"
+    <a class="link-logo-footer" href="index.html"><img class="logo-footer js-logo" src="img/my-logo-black.png"
         alt=""></a>
     <q class="main-quote">Time is the most precious asset in this world, use
       it
       <span class="only-word" id="js-quote">effectively</span></q>
     <div class="info-icon">
-      <a class="js-icon" href="https://github.com/heeeyooo" target="_blank"><i class="fa-brands fa-github"></i>
+      <a class="icon-color" href="https://github.com/heeeyooo" target="_blank"><i class="fa-brands fa-github"></i>
       </a>
-      <a class="js-icon1" href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
+      <a class="icon-color" href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
         target="_blank"><i class="fa-brands fa-instagram"></i>
       </a>
-      <a class="js-icon2" href="https://www.facebook.com/stepan.dordyay.5" target="_blank"><i
+      <a class="icon-color" href="https://www.facebook.com/stepan.dordyay.5" target="_blank"><i
           class="fa-brands fa-facebook"></i></a>
-      <a class="js-icon3" href="https://twitter.com/Heeeyooo_" target="_blank"><i
+      <a class="icon-color" href="https://twitter.com/Heeeyooo_" target="_blank"><i
           class="fa-brands fa-x-twitter"></i></a>
-      <a class="js-icon4" href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa-brands fa-twitch"></i>
+      <a class="icon-color" href="https://www.twitch.tv/heeeyooo_" target="_blank"><i class="fa-brands fa-twitch"></i>
+      </a>
+      <a class="icon-color" href="https://www.linkedin.com/in/stepan-dordiai-245715310" target="_blank"><i
+          class="fa-brands fa-linkedin"></i>
       </a>
     </div>
   </footer>
   <!-- TO TOP BUTTON -->
-  <button id="toTopBtn" class="style-to-top-btn" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></button>
+  <button id="toTopBtn" class="style-to-top-btn" onclick="topFunction()"><i
+      class="fa-solid fa-arrow-up icon-color"></i></button>
   <!-- SCRIPTS -->
   <script src="script.js"></script>
 </body>
